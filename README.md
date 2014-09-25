@@ -15,6 +15,8 @@ Drupal 7 - (https://www.drupal.org/)
 
 Check what version of Java is installed - "Java -version" in cmd. If its lower than 1.7 install the lastest Java Update.
 
+Solr Server Tutorial - (http://webwash.net/tutorials/how-setup-local-solr-server-search-api)
+
 
 ##Installation
 
@@ -50,12 +52,13 @@ OR
 1. Download solr-4.10.0.zip from a mirror (http://lucene.apache.org/solr/)
 2. Extract the zip into your website folder - So mine would be "C:\Users\ivyd\Documents\My Web Sites\drupaltest\solr".
 3. Duplicate example folder and give a relevant name e.g. "drupal-solr".
-4. Open CMD and navigate to your "drupal-solr" folder.
-5. Run the command "java -jar start.jar".
-6. In the browser go to (localhost:8983/solr) you should see the solr admin page. 
-7. Go to Drupal - Configuration, Apache Solr Search, Settings & click the default server. 
-8. Set the Solr Server URL to "http://localhost:8983/solr" - Save & Edit.
-9. Click Test Connection and you should see the message: "Your site has contacted the Apache Solr server.".
+4. Copy solrconfig.xml & schema.xml from (drupal\sites\all\modules\search_api_solr\solr-conf\3.x) into (solr\drupal-solr\solr)
+5. Open CMD and navigate to your "drupal-solr" folder.
+6. Run the command "java -jar start.jar".
+7. In the browser go to (localhost:8983/solr) you should see the solr admin page. 
+8. Go to Drupal - Configuration, Apache Solr Search, Settings & click the default server. 
+9. Set the Solr Server URL to "http://localhost:8983/solr" - Save & Edit.
+10. Click Test Connection and you should see the message: "Your site has contacted the Apache Solr server.".
 
 ### Create Search API Server
 
@@ -80,5 +83,17 @@ OR
 
 ### ApacheSolr Configuration
 
-1. 
+1. Search Settings - Apache Solr Search Module & Default checked. 
+2. Index the site.
+3. Apache Solr Search - Select all for configuration, Set page/blocks & attachments. 
+4. Settings - localhost server "default" (http://localhost:8983/solr) - This will be the search enirvoment for all indexed content. Content must be indexed to the solr server for it to work. 
+5. Default Index - Index all queued content. 
+
+
+ 
+
+
+
+
+
 

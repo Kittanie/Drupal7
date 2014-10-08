@@ -89,6 +89,20 @@ OR
 4. Settings - localhost server "default" (http://localhost:8983/solr) - This will be the search enirvoment for all indexed content. Content must be indexed to the solr server for it to work. 
 5. Default Index - Index all queued content. 
 
+## Apache Solr Search Within Files 
+This tutorial will explain to how to give Apache Solr Search the ability to search within .pdf files and extract the content out and be shown within our search results. 
+
+### Maven 
+
+1. Make sure to have the latest Java JDK installed (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+2. Set the Java JDK in your JAVA_HOME e.g. "C:\Program Files\Java\jdk1.8.0_20" enviroment varible in system varibles & add to path.  
+3. Download Maven (http://maven.apache.org/download.cgi)
+4. Set M2_HOME enviroment system varible e.g. "C:\Program Files\apache-maven-3.2.3"
+5. Set M2 system variable = %M2_HOME%/bin
+6. Set MAVEN_OPTS system variable = -Xms256m -Xmx512m (This will allocate the amount of memory we will have for out maven build)
+7. Make sure to declare these variables within the path system variable. 
+
+
 
  
 
